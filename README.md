@@ -24,7 +24,7 @@ s=socket.socket()
 s.bind(('localhost',8000))
 s.listen(5)
 c,addr=s.accept()
-address={"23.170.0.1":"FC:6D:77:8A:CF:C8","165.165.79.1":"8A:BC:E3:FA"};
+address={"169.254.130.19":"FC:6D:77:8A:CF:C8","165.165.79.1":"8A:BC:E3:FA"};
 while True:
     ip=c.recv(1024).decode()
     try:
@@ -43,7 +43,8 @@ while True:
     print("MAC Address",s.recv(1024).decode())
 ```
 ## OUPUT - ARP
-<img width="1920" height="1080" alt="Screenshot (99)" src="https://github.com/user-attachments/assets/a04e231b-857b-4a4e-b1f3-2cb4d9008eb8" />
+<img width="1920" height="1080" alt="Screenshot (101)" src="https://github.com/user-attachments/assets/6a9034f4-5a0c-44a1-96e5-0dee20b2e094" />
+
 
 ## PROGRAM - RARP
 client:
@@ -57,7 +58,7 @@ print("RARP Server is listening on port 8001...")
 c, addr = s.accept()
 
 address = {
-    "FC:6D:77:8A:CF:C8":"23.170.0.1",
+    "FC:6D:77:8A:CF:C8":"169.254.130.19",
     "8A:BC:E3:FA": "165.165.79.1"
 }
 
@@ -80,7 +81,8 @@ while True:
     print("IP Address:", s.recv(1024).decode())
 ```
 ## OUPUT -RARP
-<img width="1920" height="1080" alt="Screenshot (100)" src="https://github.com/user-attachments/assets/fcd72a63-3a53-4374-9fd0-74c04768ab3f" />
+<img width="1920" height="1080" alt="Screenshot (102)" src="https://github.com/user-attachments/assets/4e24659a-68f1-46ce-aeb2-d2f10a708879" />
+
 
 ## RESULT
 Thus, the python program for simulating ARP protocols using TCP was successfully 
